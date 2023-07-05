@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    Program Creation-->
+        <record id="g2p_program_1" model="g2p.program">
+            <field name="name">Covid Program</field>
+            <field name="currency_id">2</field>
+            <field name="target_type">individual</field>
+            <field name="company_id">1</field>
+            <field name="state">active</field>
+        </record>
+        <record id="g2p_program_2" model="g2p.program">
+            <field name="name">Ebola Program</field>
+            <field name="currency_id">2</field>
+            <field name="target_type">individual</field>
+            <field name="company_id">1</field>
+            <field name="state">active</field>
+        </record>
+<!--    Individual Creation-->
+        <record id="res_partner_1" model="res.partner">
+            <field name="given_name">Salton Massally</field>
+            <field name="family_name">Massally</field>
+            <field name="name">Salton Massally</field>
+            <field name="address">Salt Lake Califonia</field>
+            <field name="email">salton@openg2p.com</field>
+            <field name="program_membership_count">1</field>
+        </record>
+
+        <record id="res_partner_2" model="res.partner">
+            <field name="given_name">John Doe</field>
+            <field name="family_name">Doe</field>
+            <field name="name">John Doe</field>
+            <field name="address">Salt Lake India</field>
+            <field name="email">john@openg2p.com</field>
+            <field name="program_membership_count">1</field>
+        </record>
+
+        <record id="res_partner_3" model="res.partner">
+            <field name="given_name">Allison Parker</field>
+            <field name="family_name">Parker</field>
+            <field name="name">Allison Parker</field>
+            <field name="address">Salt Lake Canada</field>
+            <field name="email">allison@openg2p.com</field>
+            <field name="program_membership_count">1</field>
+        </record>
+<!--    Program Membership Creation -->
+        <record id="g2p_program_membership_1" model="g2p.program_membership">
+            <field name="partner_id" ref="res_partner_1"/>
+            <field name="program_id" ref="g2p_program_1"/>
+            <field name="state">enrolled</field>
+            <field name="deduplication_status">new</field>
+        </record>
+        <record id="g2p_program_membership_2" model="g2p.program_membership">
+            <field name="partner_id" ref="res_partner_2"/>
+            <field name="program_id" ref="g2p_program_1"/>
+            <field name="state">enrolled</field>
+            <field name="deduplication_status">new</field>
+        </record>
+<!--    Program Fund Creation-->
+        <record id="g2p_program_fund_1" model="g2p.program.fund">
+            <field name="name">Draft 1</field>
+            <field name="program_id" ref="g2p_program_1"/>
+            <field name="amount">3000</field>
+            <field name="state">posted</field>
+        </record>
+        <record id="g2p_program_fund_2" model="g2p.program.fund">
+            <field name="name">Draft 2</field>
+            <field name="program_id" ref="g2p_program_1"/>
+            <field name="amount">2000</field>
+            <field name="state">posted</field>
+        </record>
+<!--    Program Cycle Creation-->
+        <record id="g2p_cycle_1" model="g2p.cycle">
+            <field name="name">Cycle 1</field>
+            <field name="company_id">1</field>
+            <field name="program_id" ref="g2p_program_1"/>
+            <field name="state">to_approve</field>
+        </record>
+</odoo>
+
+

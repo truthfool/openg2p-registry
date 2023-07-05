@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <record id="res_partner_1" model="res.partner">
+            <field name="given_name">Salton Massally</field>
+            <field name="family_name">Massally</field>
+            <field name="name">Salton Massally</field>
+            <field name="address">Salt Lake Califonia</field>
+            <field name="email">salton@openg2p.com</field>
+            <field name="program_membership_count">1</field>
+        </record>
+
+        <record id="res_partner_2" model="res.partner">
+            <field name="given_name">John Doe</field>
+            <field name="family_name">Doe</field>
+            <field name="name">John Doe</field>
+            <field name="address">Salt Lake India</field>
+            <field name="email">john@openg2p.com</field>
+            <field name="program_membership_count">1</field>
+        </record>
+
+        <record id="res_partner_3" model="res.partner">
+            <field name="given_name">Allison Parker</field>
+            <field name="family_name">Parker</field>
+            <field name="name">Allison Parker</field>
+            <field name="address">Salt Lake Canada</field>
+            <field name="email">allison@openg2p.com</field>
+            <field name="program_membership_count">1</field>
+        </record>
+</odoo>

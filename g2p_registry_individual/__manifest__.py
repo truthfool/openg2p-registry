@@ -11,6 +11,7 @@
     "depends": ["base", "mail", "contacts", "g2p_registry_base"],
     "data": [
         "views/individuals_view.xml",
+        "data/individual_demo.xml",
     ],
     "assets": {},
     "demo": [],
